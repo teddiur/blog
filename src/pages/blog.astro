@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const pageTitle = "Home";
+const pageTitle = "Blog";
 ---
 
 <html lang="en">
@@ -13,10 +13,12 @@ const pageTitle = "Home";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">{pageTitle}</a>
+    <a href="/">Home</a>
     <a href="/sobre/">Sobre</a>
-    <a href="/blog/">Blog</a>
+    <a href="/blog/">{pageTitle}</a>
 
-    <h1>Rodrigo Queiroz</h1>
+    <ul>
+      <li><a href="posts/introducao-funcional-a-react-redux">Post 1</a></li>
+    </ul>
   </body>
 </html>
