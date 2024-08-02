@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import Global from "../styles/Global.astro";
 
 const { pageTitle } = Astro.props;
 
@@ -24,6 +24,7 @@ const title = pageTitle?.charAt(0).toUpperCase() + pageTitle?.slice(1);
   </body>
 </html>
 
+<Global />
 <style>
   .title {
     text-transform: capitalize;
