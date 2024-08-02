@@ -1,5 +1,8 @@
 ---
 import Social from "./Social.astro";
+import { Image } from "astro:assets";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg";
 ---
 
 <style>
@@ -11,6 +14,11 @@ import Social from "./Social.astro";
 </style>
 <hr />
 <footer>
-  <Social platform="github" username="teddiur" />
-  <Social platform="linkedin" username="ryaqueiroz" />
+  <Social platform="github" username="teddiur">
+    <Image src={github} alt="github" width="40" height="30" />
+  </Social>
+
+  <Social platform="linkedin" username="in/ryaqueiroz">
+    <Image src={linkedin} alt="linkedin" width="40" height="30" />
+  </Social>
 </footer>
