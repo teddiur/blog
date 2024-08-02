@@ -5,7 +5,7 @@ import "../styles/global.css";
 
 const { pageTitle } = Astro.props;
 
-const title = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
+const title = pageTitle?.charAt(0).toUpperCase() + pageTitle?.slice(1);
 ---
 
 <html lang="en">
