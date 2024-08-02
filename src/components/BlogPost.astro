@@ -1,0 +1,17 @@
+---
+const { url, title } = Astro.props;
+---
+
+<style>
+  a {
+    font-family: "Courier New", Courier, monospace;
+    transition: all 0.5s;
+  }
+
+  a:hover {
+    color: navy;
+  }
+</style>
+<li>
+  <a href={url}>{title}</a>
+</li>

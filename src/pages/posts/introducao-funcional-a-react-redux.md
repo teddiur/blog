@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "Introdução Funcional à React-Redux"
 pubDate: 2021-03-26
 description: "This is the first post of my new Astro blog."
@@ -8,10 +9,6 @@ image:
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["react", "redux", "learning in public"]
 ---
-
-# Introdução Funcional à React-Redux
-
-Publicado em: 2021-03-26
 
 ## Disclaimer
 
@@ -23,7 +20,13 @@ Publicado em: 2021-03-26
 
 Ok, vamos por partes: Redux é uma biblioteca JavaScript de gerenciamento de estados. A partir dela foi construída a biblioteca React Redux, que implementa facilidades como hooks.
 
-Mas por que usa-la? 1- torna a sua aplicação mais fácil de ser testada e 2- poder separar a lógica de gerenciamento de estados da UI 3- elimina a necessidade de "props drilling", ou seja, passar props para uma sequência de filhos, para que filhos em ramos diferentes da árvore de componentes possam usa-las.
+Mas por que usa-la?
+
+1. torna a sua aplicação mais fácil de ser testada e;
+
+2. poder separar a lógica de gerenciamento de estados da UI;
+
+3. elimina a necessidade de "props drilling", ou seja, passar props para uma sequência de filhos, para que filhos em ramos diferentes da árvore de componentes possam usa-las.
 
 Você pode encontrar um exemplo de aplicação que aplica props drilling aqui (movie tem que ser definido em Home) e uma alternativa dos mesmo components com redux aqui (Home não precisa saber do estado movie).
 Como funciona?
