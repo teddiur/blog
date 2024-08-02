@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const allPosts = await Astro.glob("../posts/*.md");
+const tags = [
+  ...new Set(allPosts.flatMap((post) => post.frontmatter.tags || [])),
+];
+---
+
+<BaseLayout pageTitle="Tags">
+  <section class="tags">
+    {
+      tags.map((tag) => (
+        <a class="tag" href={`/tags/${tag}`}>
+          #{tag}
+        </a>
+      ))
+    }
+  </section>
+</BaseLayout>
+<style>
+  a {
+    color: #00539f;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: solid 1px #a1a1a1;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.15em;
+    background-color: #f8fcfd;
+    transition: all 0.5s;
+  }
+
+  .tag:hover {
+    background-color: #6c2c91;
+    color: #f8fcfd;
+  }
+</style>
