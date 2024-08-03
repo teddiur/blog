@@ -1,4 +1,5 @@
 ---
+import Tag from "~/components/Tag.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
@@ -7,34 +8,19 @@ const { tags } = frontmatter;
 
 <BaseLayout pageTitle={frontmatter.title}>
   <p>Escrito por {frontmatter.author}</p>
-  <p>Publicado em {frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <div class="tags">
-    {
-      tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
+  <p>Publicado em {frontmatter.pubDate.toISOString().slice(0, 10)}</p>
+
   <slot />
+  <div class="tags">
+    {tags.map((tag) => <Tag tag={tag} />)}
+  </div>
+  <div>
+    <a href="/posts">← Ler mais</a>
+  </div>
 </BaseLayout>
 <style>
-  a {
-    color: #00539f;
-  }
-
   .tags {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
   }
 </style>

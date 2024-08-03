@@ -1,12 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: "Introdução Funcional à React-Redux"
 pubDate: 2021-03-26
 description: "This is the first post of my new Astro blog."
 author: "Rodrigo Queiroz"
-image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
 tags: ["react", "redux", "learning in public"]
 ---
 
@@ -35,11 +31,11 @@ O mínimo necessário para um redux é:
 
 ### 1- Store
 
-A store é o estado global da aplicação, deve haver apenas uma por aplicação e ela nunca deve ser alterada diretamente, para alterações utilize os reducers. Para criar uma store utilize createStore() passando como argumento o reducer. Para a store estar disponível à toda a aplicação envolva-a com o componente Provider de 'react-redux', <Provider store={store}>. Esse Provider age como um <Context.Provider> (por baixo dos panos é!!), mas com a conveniência de não ter que passar o contexto nos elementos filhos.
+A store é o estado global da aplicação, deve haver apenas uma por aplicação e ela nunca deve ser alterada diretamente, para alterações utilize os reducers. Para criar uma store utilize `createStore()` passando como argumento o reducer. Para a store estar disponível à toda a aplicação envolva-a com o componente Provider de 'react-redux', `<Provider store={store}>`. Esse Provider age como um `<Context.Provider>` (por baixo dos panos é!!), mas com a conveniência de não ter que passar o contexto nos elementos filhos.
 
 ### 2- Reducer
 
-O reducer é quem alterar a store. Ele é uma função Javascript que recebe dois argumentos e retorna um estado (geralmente um objeto). É possível criar diversos reducers e combina-los através de combineReducers(), passando-os como argumento dentro de um objeto. As chaves desse objeto serão utilizadas para nomear o estado de cada reducer. As alterações devem ser feitas de maneira imutável.
+O reducer é quem alterar a store. Ele é uma função Javascript que recebe dois argumentos e retorna um estado (geralmente um objeto). É possível criar diversos reducers e combina-los através de `combineReducers()`, passando-os como argumento dentro de um objeto. As chaves desse objeto serão utilizadas para nomear o estado de cada reducer. As alterações devem ser feitas de maneira imutável.
 
 ```js
 // /src/store/user.js
@@ -84,7 +80,7 @@ Ok, agora temos uma store e ela está disponível para toda a aplicação. Mas c
 
 ### 3- Selector
 
-O papel do selector é expor o estado armazenado na store para a sua aplicação. Caso tenha utilizado apenas um reducer é possível faze-lo com store.getState(), sendo store o objeto retornado por createStore(). Caso tenha utilizado combineReducers(), opte por useSelector de 'react-redux'. Esse função espera uma função de callback que será chamada com o estado global e um parametro opcional (bateu a curiosidade? olha as referências).
+O papel do selector é expor o estado armazenado na store para a sua aplicação. Caso tenha utilizado apenas um reducer é possível faze-lo com `store.getState()`, sendo store o objeto retornado por `createStore()`. Caso tenha utilizado `combineReducers()`, opte por useSelector de 'react-redux'. Esse função espera uma função de callback que será chamada com o estado global e um parametro opcional (bateu a curiosidade? olha as referências).
 
 ```js
 // /src/pages/Home/index.js
@@ -168,9 +164,9 @@ const Home = () => {
 
 ## Recapitulando
 
-A store é quem guarda o estado e é criada a partir de createStore(reducer). Para modificar um estado, chama-se o dispatch (do useDispatch()) com uma action (objeto com a forma {type, payload}) e o estado será modificado segundo a lógica definida no reducer (função que retorna um estado). Para ter acesso ao estado utiliza-se um selector (podendo ser useSelector(callback) ou store.getState()).
+A store é quem guarda o estado e é criada a partir de `createStore(reducer)`. Para modificar um estado, chama-se o dispatch (do useDispatch()) com uma action (objeto com a forma {type, payload}) e o estado será modificado segundo a lógica definida no reducer (função que retorna um estado). Para ter acesso ao estado utiliza-se um selector (podendo ser `useSelector(callbac`)`ou`store.getState())`.
 
-Redux foi nomeado assim porque age como um Array.prototipe.reduce(), no sentido que, ambos, a cada iteração, recebem dois parâmetros (estado e ação, no caso do redux) e retornam um novo estado. No reduce itera-se por um array e no redux itera-se pelo tempo de vida da aplicação.
+Redux foi nomeado assim porque age como um `Array.prototipe.reduce()`, no sentido que, ambos, a cada iteração, recebem dois parâmetros (estado e ação, no caso do redux) e retornam um novo estado. No reduce itera-se por um array e no redux itera-se pelo tempo de vida da aplicação.
 
 Reduce
 
@@ -216,6 +212,8 @@ dispatch({ type: "increment" });
 E de novo chegaríamos a `store.getState() = 2`
 
 Sob essa ótica, o conjunto de todas as interações do usuário com a sua aplicação poderia ser entendido como um grande array de actions, que é reduzido pelo Redux ao estado final pós interação com usuário.
+
+---
 
 Quer saber mais sobre o assunto?
 
