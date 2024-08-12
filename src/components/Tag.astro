@@ -13,17 +13,18 @@ const { tag } = Astro.props;
 
   .tag {
     margin: 0.5em;
-    border: solid 1px navy;
+    border: solid 1px var(--secondaryColorVariant);
     border-radius: 0.5em;
     padding: 0.5em 1em;
     font-size: 1.15em;
-    background-color: #f8fcfd;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
     transition: all 0.5s;
     text-transform: capitalize;
   }
 
   .tag:hover {
-    background-color: #6c2c91;
-    color: #f8fcfd;
+    background-color: var(--secondaryColorVariant);
+    color: var(--primaryColorVariant);
   }
 </style>

@@ -4,8 +4,46 @@
 
 <style is:global>
   html {
-    background-color: #f1f5f9;
+    pre {
+      padding: 1rem 0.5rem;
+    }
+    code {
+      font-weight: bold;
+    }
+    pre code {
+      font-weight: unset;
+    }
+    --backgroundColor: #021e58;
+    --primaryColor: #fbfffe;
+    --primaryColorVariant: #ccc9dc;
+    --secondaryColor: #06bee1;
+    --secondaryColorVariant: #2541b2;
+    --errorColor: #f46036;
+    background-color: var(--backgroundColor);
     font-family: sans-serif;
+  }
+  h1,
+  h2,
+  h3 {
+    color: var(--secondaryColor);
+  }
+  a {
+    color: var(--primaryColor);
+  }
+  p,
+  li {
+    color: var(--primaryColorVariant);
+  }
+
+  pre {
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+  }
+  code {
+    font-weight: bold;
+  }
+  pre code {
+    font-weight: unset;
   }
 
   body {
@@ -29,7 +67,7 @@
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
+
     display: none;
     margin: 0;
   }
@@ -49,7 +87,7 @@
 
   .nav-links a:hover,
   .nav-links a:focus {
-    background-color: #ff9776;
+    background-color: var(--secondaryColor);
     transition: all 0.5s;
   }
 
@@ -70,15 +108,5 @@
     .hamburger {
       display: none;
     }
-  }
-
-  pre {
-    padding: 1rem 0.5rem;
-  }
-  code {
-    font-weight: bold;
-  }
-  pre code {
-    font-weight: unset;
   }
 </style>

@@ -18,5 +18,6 @@ const tags = [...new Set(allPosts.flatMap((post) => post.data.tags || []))];
   .tags {
     display: flex;
     flex-wrap: wrap;
+    color: var(--primaryColor);
   }
 </style>

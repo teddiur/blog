@@ -8,17 +8,27 @@ import linkedin from "../assets/linkedin.svg";
 <style>
   footer {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
     margin-top: 2rem;
+  }
+  .social {
+    display: flex;
+    gap: 1rem;
+  }
+  h2 {
+    color: var(--primaryColor);
   }
 </style>
 <hr />
 <footer>
-  <Social platform="github" username="teddiur">
-    <Image src={github} alt="github" width="40" height="30" />
-  </Social>
+  <h2>Redes Sociais:</h2>
+  <div class="social">
+    <Social platform="github" username="teddiur">
+      <Image src={github} alt="github" width="40" height="30" />
+    </Social>
 
-  <Social platform="linkedin" username="in/ryaqueiroz">
-    <Image src={linkedin} alt="linkedin" width="40" height="30" />
-  </Social>
+    <Social platform="linkedin" username="in/ryaqueiroz">
+      <Image src={linkedin} alt="linkedin" width="40" height="30" />
+    </Social>
+  </div>
 </footer>
