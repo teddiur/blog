@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "Contador de Caracteres";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <textarea rows="3" id="counter"></textarea>
+  <div>
+    <p>Quantidade de caracteres:</p>
+    <p id="display">0</p>
+  </div>
+</BaseLayout>
+<script>
+  const counter = document.getElementById("counter");
+  const display = document.getElementById("display");
+  counter?.addEventListener("change", (event) => {
+    display.innerText = event?.target?.value?.length || 0;
+  });
+</script>
+<style>
+  textarea {
+    min-width: 50%;
+  }
+
+  div {
+    display: flex;
+    gap: 1rem;
+  }
+</style>
