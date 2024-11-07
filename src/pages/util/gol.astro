@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { GameOfLife } from "../../features/gol/game-of-life";
+const pageTitle = "Conway's Game of Life";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <GameOfLife client:load />
+</BaseLayout>
