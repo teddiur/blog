@@ -1,0 +1,5 @@
+/home/teddiur/dev/blog/README.md
+/home/teddiur/dev/blog/src/content/posts/introducao-funcional-a-react-redux.md
+/home/teddiur/dev/blog/public/favicon.svg
+/home/teddiur/dev/blog/src/assets/github.svg
+/home/teddiur/dev/blog/src/assets/linkedin.svg
