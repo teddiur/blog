@@ -11,16 +11,16 @@
 .table {
   min-width: 80%;
 }
-.table * {
-  border: 1px solid gray;
-  aspect-ratio: 1/1;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-td {
+.cell {
   width: 20px;
   height: 20px;
+  border: 1px solid #d2c5c5;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 button {
