@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { OCR } from "../../features/ocr/ocr";
+const pageTitle = "Optical Character Recognition";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <OCR client:load />
+</BaseLayout>
