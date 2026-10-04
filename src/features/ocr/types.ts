@@ -4,6 +4,10 @@ export interface OCRResult {
     error?: boolean
 }
 
+export interface ProcessingStatus {
+    message: string
+}
+
 export interface ImageFile {
     id: string;
     file?: File;
@@ -11,6 +15,7 @@ export interface ImageFile {
     previewUrl?: string;
     results?: OCRResult[];
     isProcessing: boolean;
+    processingStatus: ProcessingStatus[]
     error?: string;
     isPdf?: boolean;
 }

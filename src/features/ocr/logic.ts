@@ -36,12 +36,13 @@ export const processFile = async function* (imageFile: ImageFile): AsyncGenerato
             yield result
 
         }
-        console.log('terminou')
         await worker.terminate();
+        console.log('terminou')
     } else {
         const result = await performOCRTesseract(imageFile, worker);
-        await worker.terminate();
+
         yield result;
+        await worker.terminate();
     }
 
 };
