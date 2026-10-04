@@ -6,12 +6,6 @@
       "package_allowscripts",
       "package_allowscripts_tesseract_js_7_0_0",
       "package_name",
-      "package_scripts",
-      "package_scripts_astro",
-      "package_scripts_build",
-      "package_scripts_dev",
-      "package_scripts_preview",
-      "package_scripts_start",
       "package_type",
       "package_version",
       "ref_astro",
@@ -19,12 +13,16 @@
       "ref_npm",
       "ref_pdfjs_dist",
       "ref_react_dom",
+      "ref_tesseract_js",
       "ref_types_react",
-      "ref_types_react_dom"
+      "ref_types_react_dom",
+      "ref_zod",
+      "src_content_config",
+      "src_content_config_collections",
+      "src_content_config_posts"
     ],
     "1": [
       "ref_react",
-      "ref_tesseract_js",
       "src_components_imageupload",
       "src_components_imageupload_buttonstyle",
       "src_components_imageupload_containerstyle",
@@ -45,6 +43,7 @@
       "src_pages_util_ocr"
     ],
     "2": [
+      "astro_assets",
       "ref_astro_assets",
       "src_assets_github",
       "src_assets_linkedin",
@@ -64,23 +63,6 @@
       "src_styles_global"
     ],
     "3": [
-      "ref_astro_content",
-      "ref_zod",
-      "src_components_blogpost",
-      "src_components_tag",
-      "src_content_config",
-      "src_content_config_collections",
-      "src_content_config_posts",
-      "src_layouts_markdownpostlayout",
-      "src_pages_posts_index",
-      "src_pages_posts_slug",
-      "src_pages_posts_slug_getstaticpaths",
-      "src_pages_tags_index",
-      "src_pages_tags_index_tags",
-      "src_pages_tags_tag",
-      "src_pages_tags_tag_getstaticpaths"
-    ],
-    "4": [
       "action",
       "action_creator",
       "dispatch",
@@ -95,6 +77,20 @@
       "src_store_user_actions_dosetuser",
       "src_store_user_userreducer",
       "store"
+    ],
+    "4": [
+      "astro_content",
+      "ref_astro_content",
+      "src_components_blogpost",
+      "src_components_tag",
+      "src_layouts_markdownpostlayout",
+      "src_pages_posts_index",
+      "src_pages_posts_slug",
+      "src_pages_posts_slug_getstaticpaths",
+      "src_pages_tags_index",
+      "src_pages_tags_index_tags",
+      "src_pages_tags_tag",
+      "src_pages_tags_tag_getstaticpaths"
     ],
     "5": [
       "src_features_gol_game_of_life",
@@ -146,24 +142,33 @@
       "tsconfig_extends"
     ],
     "9": [
-      "public_pdf_worker_min"
+      "package_scripts",
+      "package_scripts_astro",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_scripts_start"
     ],
     "10": [
+      "public_pdf_worker_min"
+    ],
+    "11": [
       "src_env_d"
     ]
   },
   "cohesion": {
-    "0": 0.10526315789473684,
-    "1": 0.18947368421052632,
-    "2": 0.11764705882352941,
-    "3": 0.1523809523809524,
-    "4": 0.27472527472527475,
+    "0": 0.1111111111111111,
+    "1": 0.2046783625730994,
+    "2": 0.1111111111111111,
+    "3": 0.27472527472527475,
+    "4": 0.24242424242424243,
     "5": 0.32727272727272727,
     "6": 0.2,
     "7": 0.2,
     "8": 0.2,
-    "9": 1.0,
-    "10": 1.0
+    "9": 0.3333333333333333,
+    "10": 1.0,
+    "11": 1.0
   },
   "gods": [
     {
@@ -182,19 +187,24 @@
       "degree": 7
     },
     {
-      "id": "src_features_ocr_ocr_ocr",
-      "label": "OCR()",
+      "id": "package_scripts",
+      "label": "scripts",
       "degree": 6
     },
     {
-      "id": "package_scripts",
-      "label": "scripts",
+      "id": "src_features_ocr_ocr_ocr",
+      "label": "OCR()",
       "degree": 6
     },
     {
       "id": "src_pages_home_index_home",
       "label": "Home",
       "degree": 6
+    },
+    {
+      "id": "src_features_gol_game_of_life_gameoflife",
+      "label": "GameOfLife()",
+      "degree": 5
     },
     {
       "id": "src_features_ocr_logic_processfile",
@@ -204,11 +214,6 @@
     {
       "id": "src_features_ocr_utils_pdfconverter_pdftoimages",
       "label": "pdfToImages()",
-      "degree": 5
-    },
-    {
-      "id": "src_features_gol_game_of_life_gameoflife",
-      "label": "GameOfLife()",
       "degree": 5
     },
     {
@@ -224,6 +229,28 @@
       "source_files": [
         "src/features/ocr/ocr.tsx",
         "src/components/ImageUpload.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "GameOfLife()",
+      "target": "randomGrid()",
+      "source_files": [
+        "src/features/gol/game-of-life.jsx",
+        "src/features/gol/logic.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "GameOfLife()",
+      "target": "run()",
+      "source_files": [
+        "src/features/gol/game-of-life.jsx",
+        "src/features/gol/logic.js"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
@@ -250,32 +277,10 @@
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "cross-file semantic connection"
-    },
-    {
-      "source": "OCR()",
-      "target": "pdfToImages()",
-      "source_files": [
-        "src/features/ocr/ocr.tsx",
-        "src/features/ocr/utils/pdfConverter.ts"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "cross-file semantic connection"
-    },
-    {
-      "source": "GameOfLife()",
-      "target": "randomGrid()",
-      "source_files": [
-        "src/features/gol/game-of-life.jsx",
-        "src/features/gol/logic.js"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "cross-file semantic connection"
     }
   ],
   "tokens": {
-    "input": 0,
-    "output": 0
+    "input": 9323,
+    "output": 20814
   }
 }
