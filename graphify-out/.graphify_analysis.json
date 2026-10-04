@@ -1,17 +1,47 @@
 {
   "communities": {
     "0": [
+      "ref_astro_assets",
+      "ref_astro_content",
+      "ref_zod",
+      "src_assets_github",
+      "src_assets_linkedin",
+      "src_components_blogpost",
+      "src_components_footer",
+      "src_components_hamburguer",
+      "src_components_header",
+      "src_components_navigation",
+      "src_components_social",
+      "src_components_tag",
+      "src_content_config",
+      "src_content_config_collections",
+      "src_content_config_posts",
+      "src_layouts_baselayout",
+      "src_layouts_markdownpostlayout",
+      "src_pages_index",
+      "src_pages_posts_index",
+      "src_pages_posts_slug",
+      "src_pages_posts_slug_getstaticpaths",
+      "src_pages_sobre",
+      "src_pages_sobre_skills",
+      "src_pages_tags_index",
+      "src_pages_tags_index_tags",
+      "src_pages_tags_tag",
+      "src_pages_tags_tag_getstaticpaths",
+      "src_pages_util_char_counter",
+      "src_pages_util_char_counter_counter",
+      "src_pages_util_char_counter_display",
+      "src_scripts_menu",
+      "src_styles_global"
+    ],
+    "1": [
       "astro_config",
       "package",
       "package_allowscripts",
       "package_allowscripts_tesseract_js_7_0_0",
+      "package_devdependencies",
+      "package_devdependencies_typescript",
       "package_name",
-      "package_scripts",
-      "package_scripts_astro",
-      "package_scripts_build",
-      "package_scripts_dev",
-      "package_scripts_preview",
-      "package_scripts_start",
       "package_type",
       "package_version",
       "ref_astro",
@@ -19,68 +49,30 @@
       "ref_npm",
       "ref_pdfjs_dist",
       "ref_react_dom",
-      "ref_types_react",
-      "ref_types_react_dom"
-    ],
-    "1": [
-      "ref_react",
       "ref_tesseract_js",
-      "src_components_imageupload",
-      "src_components_imageupload_buttonstyle",
-      "src_components_imageupload_containerstyle",
-      "src_components_imageupload_imageupload",
-      "src_components_imageupload_imageuploadprops",
+      "ref_types_react",
+      "ref_types_react_dom",
+      "ref_typescript"
+    ],
+    "2": [
+      "src_features_ocr_components_ocrresultitem",
+      "src_features_ocr_components_ocrresultitem_ocrresultitemprops",
       "src_features_ocr_logic",
       "src_features_ocr_logic_performocrtesseract",
       "src_features_ocr_logic_processfile",
-      "src_features_ocr_ocr",
-      "src_features_ocr_ocr_buildcurrentfile",
-      "src_features_ocr_ocr_initialstate",
-      "src_features_ocr_ocr_ocr",
       "src_features_ocr_types",
       "src_features_ocr_types_imagefile",
       "src_features_ocr_types_ocrresult",
+      "src_features_ocr_types_processingstatus",
+      "src_features_ocr_useocr",
+      "src_features_ocr_useocr_buildcurrentfile",
+      "src_features_ocr_useocr_initialstate",
+      "src_features_ocr_useocr_swaplast",
+      "src_features_ocr_useocr_useocr",
       "src_features_ocr_utils_pdfconverter",
-      "src_features_ocr_utils_pdfconverter_pdftoimages",
-      "src_pages_util_ocr"
-    ],
-    "2": [
-      "ref_astro_assets",
-      "src_assets_github",
-      "src_assets_linkedin",
-      "src_components_footer",
-      "src_components_hamburguer",
-      "src_components_header",
-      "src_components_navigation",
-      "src_components_social",
-      "src_layouts_baselayout",
-      "src_pages_index",
-      "src_pages_sobre",
-      "src_pages_sobre_skills",
-      "src_pages_util_char_counter",
-      "src_pages_util_char_counter_counter",
-      "src_pages_util_char_counter_display",
-      "src_scripts_menu",
-      "src_styles_global"
+      "src_features_ocr_utils_pdfconverter_pdftoimages"
     ],
     "3": [
-      "ref_astro_content",
-      "ref_zod",
-      "src_components_blogpost",
-      "src_components_tag",
-      "src_content_config",
-      "src_content_config_collections",
-      "src_content_config_posts",
-      "src_layouts_markdownpostlayout",
-      "src_pages_posts_index",
-      "src_pages_posts_slug",
-      "src_pages_posts_slug_getstaticpaths",
-      "src_pages_tags_index",
-      "src_pages_tags_index_tags",
-      "src_pages_tags_tag",
-      "src_pages_tags_tag_getstaticpaths"
-    ],
-    "4": [
       "action",
       "action_creator",
       "dispatch",
@@ -95,6 +87,20 @@
       "src_store_user_actions_dosetuser",
       "src_store_user_userreducer",
       "store"
+    ],
+    "4": [
+      "ref_react",
+      "src_components_imageupload",
+      "src_components_imageupload_containerstyle",
+      "src_components_imageupload_imageupload",
+      "src_components_imageupload_imageuploadprops",
+      "src_features_ocr_components_ocrresultitem_ocrresultitem",
+      "src_features_ocr_components_processingstatus",
+      "src_features_ocr_components_processingstatus_processingstatus",
+      "src_features_ocr_components_processingstatus_processingstatusprops",
+      "src_features_ocr_ocr",
+      "src_features_ocr_ocr_ocr",
+      "src_pages_util_ocr"
     ],
     "5": [
       "src_features_gol_game_of_life",
@@ -138,7 +144,6 @@
       "tsconfig",
       "tsconfig_compileroptions",
       "tsconfig_compileroptions_allowjs",
-      "tsconfig_compileroptions_baseurl",
       "tsconfig_compileroptions_jsx",
       "tsconfig_compileroptions_jsximportsource",
       "tsconfig_compileroptions_paths",
@@ -146,24 +151,33 @@
       "tsconfig_extends"
     ],
     "9": [
-      "public_pdf_worker_min"
+      "package_scripts",
+      "package_scripts_astro",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_scripts_start"
     ],
     "10": [
+      "public_pdf_worker_min"
+    ],
+    "11": [
       "src_env_d"
     ]
   },
   "cohesion": {
-    "0": 0.10526315789473684,
-    "1": 0.18947368421052632,
-    "2": 0.11764705882352941,
-    "3": 0.1523809523809524,
-    "4": 0.27472527472527475,
+    "0": 0.07258064516129033,
+    "1": 0.11764705882352941,
+    "2": 0.275,
+    "3": 0.27472527472527475,
+    "4": 0.2727272727272727,
     "5": 0.32727272727272727,
     "6": 0.2,
     "7": 0.2,
-    "8": 0.2,
-    "9": 1.0,
-    "10": 1.0
+    "8": 0.2222222222222222,
+    "9": 0.3333333333333333,
+    "10": 1.0,
+    "11": 1.0
   },
   "gods": [
     {
@@ -177,13 +191,23 @@
       "degree": 8
     },
     {
-      "id": "tsconfig_compileroptions",
-      "label": "compilerOptions",
+      "id": "src_features_ocr_useocr_useocr",
+      "label": "useOCR()",
       "degree": 7
     },
     {
       "id": "src_features_ocr_ocr_ocr",
       "label": "OCR()",
+      "degree": 6
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 6
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
       "degree": 6
     },
     {
@@ -197,37 +221,38 @@
       "degree": 6
     },
     {
+      "id": "src_features_ocr_types_ocrresult",
+      "label": "OCRResult",
+      "degree": 5
+    },
+    {
       "id": "src_features_ocr_logic_processfile",
       "label": "processFile()",
-      "degree": 5
-    },
-    {
-      "id": "src_features_ocr_utils_pdfconverter_pdftoimages",
-      "label": "pdfToImages()",
-      "degree": 5
-    },
-    {
-      "id": "src_features_gol_game_of_life_gameoflife",
-      "label": "GameOfLife()",
-      "degree": 5
-    },
-    {
-      "id": "src_app_app",
-      "label": "App",
       "degree": 5
     }
   ],
   "surprises": [
     {
+      "source": "OCRResultItemProps",
+      "target": "OCRResult",
+      "source_files": [
+        "src/features/ocr/components/OCRResultItem.tsx",
+        "src/features/ocr/types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `OCRResultItemProps` unexpectedly reaches hub `OCRResult`"
+    },
+    {
       "source": "OCR()",
-      "target": "ImageUpload()",
+      "target": "useOCR()",
       "source_files": [
         "src/features/ocr/ocr.tsx",
-        "src/components/ImageUpload.tsx"
+        "src/features/ocr/useOCR.ts"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "why": "cross-file semantic connection"
+      "why": "bridges separate communities"
     },
     {
       "source": "processFile()",
@@ -241,10 +266,10 @@
       "why": "cross-file semantic connection"
     },
     {
-      "source": "OCR()",
+      "source": "useOCR()",
       "target": "processFile()",
       "source_files": [
-        "src/features/ocr/ocr.tsx",
+        "src/features/ocr/useOCR.ts",
         "src/features/ocr/logic.ts"
       ],
       "confidence": "EXTRACTED",
@@ -252,30 +277,52 @@
       "why": "cross-file semantic connection"
     },
     {
-      "source": "OCR()",
+      "source": "useOCR()",
       "target": "pdfToImages()",
       "source_files": [
-        "src/features/ocr/ocr.tsx",
+        "src/features/ocr/useOCR.ts",
         "src/features/ocr/utils/pdfConverter.ts"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "cross-file semantic connection"
-    },
-    {
-      "source": "GameOfLife()",
-      "target": "randomGrid()",
-      "source_files": [
-        "src/features/gol/game-of-life.jsx",
-        "src/features/gol/logic.js"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "cross-file semantic connection"
     }
   ],
-  "tokens": {
-    "input": 0,
-    "output": 0
-  }
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `react` connect `ocr.tsx` to `package.json`, `useOCR.ts`, `game-of-life.jsx`?",
+      "why": "High betweenness centrality (0.267) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.102) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Astro Starter Kit: Minimal` connect `Astro Starter Kit: Minimal` to `package.json`?",
+      "why": "High betweenness centrality (0.102) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 7 inferred relationships involving `Redux` (e.g. with `Action` and `Dispatch`) actually correct?",
+      "why": "`Redux` has 7 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `ImageUploadProps`, `ProcessingStatusProps`, `collections` to the rest of the system?",
+      "why": "53 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `BaseLayout.astro` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07258064516129033 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `package.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected."
+    }
+  ]
 }
