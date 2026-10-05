@@ -1,10 +1,8 @@
 import React from 'react';
 
-
 interface ImageUploadProps {
   onFileSelect: (file: File) => void;
 }
-
 
 const containerStyle: React.CSSProperties = {
   display: 'flex',
@@ -21,10 +19,7 @@ const containerStyle: React.CSSProperties = {
   transition: 'background-color 0.3s',
 };
 
-
 export function ImageUpload({ onFileSelect }: ImageUploadProps) {
-
-
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -35,14 +30,11 @@ export function ImageUpload({ onFileSelect }: ImageUploadProps) {
   return (
     <div style={containerStyle}>
       <div style={{ textAlign: 'center' }}>
-        <p style={{ marginBottom: '1rem', color: '#666' }}>Upload an image for OCR</p>
-        <input
-          id="fileInput"
-          type="file"
-          onChange={handleFileChange}
-        />
+        <p style={{ marginBottom: '1rem', color: '#666' }}>
+          Upload an image for OCR
+        </p>
+        <input id="fileInput" type="file" onChange={handleFileChange} />
       </div>
-
     </div>
   );
 }

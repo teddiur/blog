@@ -1,21 +1,21 @@
 export interface OCRResult {
-    text: string;
-    confidence: number;
-    error?: boolean
+  text: string;
+  confidence: number;
+  error?: boolean;
 }
 
 export interface ProcessingStatus {
-    message: string
+  message: string;
 }
 
 export interface ImageFile {
-    id: string;
-    file?: File;
-    images?: File[]
-    previewUrl?: string;
-    results?: OCRResult[];
-    isProcessing: boolean;
-    processingStatus: ProcessingStatus[]
-    error?: string;
-    isPdf?: boolean;
+  id: string;
+  file?: File;
+  images?: File[];
+  previewUrl?: string;
+  results?: OCRResult[];
+  isProcessing: boolean;
+  processingStatus: ProcessingStatus[];
+  error?: string;
+  isPdf?: boolean;
 }

@@ -14,7 +14,11 @@ export function OCRResultItem({ result, previewUrl }: OCRResultItemProps) {
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       {previewUrl && (
-        <img style={{ height: '100%', maxWidth: '50%' }} src={previewUrl} alt="OCR preview" />
+        <img
+          style={{ height: '100%', maxWidth: '50%' }}
+          src={previewUrl}
+          alt="OCR preview"
+        />
       )}
       <div>
         <button onClick={handleCopy}>Copiar</button>
