@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { pdfToImages } from './utils/pdfConverter';
-import { processFile } from './logic';
+import { processFile, swapLast } from './logic';
 import type { ImageFile, OCRResult, ProcessingStatus } from './types';
 
 const initialState = {
@@ -23,9 +23,7 @@ const buildCurrentFile = (file: File, images: File[] | null) => {
     }
 }
 
-function swapLast<T>(array: T[], newItem: T): T[] {
-    return array.slice(0, array.length - 1).concat(newItem)
-}
+
 
 export function useOCR() {
     const [currentFile, setCurrentFile] = useState<ImageFile>(initialState);

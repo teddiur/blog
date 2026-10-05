@@ -2,7 +2,7 @@ import Tesseract from 'tesseract.js';
 import { pdfToImages } from './utils/pdfConverter';
 import type { OCRResult, ImageFile } from './types';
 
-export const performOCRTesseract = async (imageFile: ImageFile, worker: Tesseract.Worker): Promise<OCRResult> => {
+const performOCRTesseract = async (imageFile: ImageFile, worker: Tesseract.Worker): Promise<OCRResult> => {
     console.log('antes')
     const result = await worker.recognize(
         imageFile.file
@@ -18,7 +18,7 @@ export const performOCRTesseract = async (imageFile: ImageFile, worker: Tesserac
 
 };
 
-export const processFile = async function* (imageFile: ImageFile): AsyncGenerator<OCRResult, void, unknown> {
+const processFile = async function* (imageFile: ImageFile): AsyncGenerator<OCRResult, void, unknown> {
     if (!imageFile.file) {
         throw new Error("No file provided");
     }
@@ -44,5 +44,10 @@ export const processFile = async function* (imageFile: ImageFile): AsyncGenerato
         yield result;
         await worker.terminate();
     }
-
 };
+
+function swapLast<T>(array: T[], newItem: T): T[] {
+    return array.slice(0, array.length - 1).concat(newItem)
+}
+
+export { swapLast, processFile, performOCRTesseract }
