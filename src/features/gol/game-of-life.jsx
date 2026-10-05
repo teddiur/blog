@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import style from "./game-of-life.module.css";
-import {randomGrid , run} from './logic'
+import { useState, useEffect } from 'react';
+import style from './game-of-life.module.css';
+import { randomGrid, run } from './logic';
 
 const SIZE = 50;
 const TIMER = 200;
@@ -16,8 +16,6 @@ const gameStateEnum = {
   RUNNING: 2,
   STOPPED: 3,
 };
-
-
 
 export const GameOfLife = () => {
   const [grid, setGrid] = useState(getInitialState());

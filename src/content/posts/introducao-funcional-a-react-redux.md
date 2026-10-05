@@ -1,9 +1,9 @@
 ---
-title: "Introdução Funcional à React-Redux"
+title: 'Introdução Funcional à React-Redux'
 pubDate: 2021-03-26
-description: "This is the first post of my new Astro blog."
-author: "Rodrigo Queiroz"
-tags: ["react", "redux", "learning in public"]
+description: 'This is the first post of my new Astro blog.'
+author: 'Rodrigo Queiroz'
+tags: ['react', 'redux', 'learning in public']
 ---
 
 ## Disclaimer
@@ -108,7 +108,7 @@ São as instruções que o dispatch enviará para o reducer. Ela é um objeto qu
 
 ```js
 // /src/pages/Home/index.js
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 
 const Home = () => {
   //repare que a chave declarada em combineReducers é usada aqui
@@ -116,7 +116,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch({ type: "user/setUser", payload: "Sergio" });
+    dispatch({ type: 'user/setUser', payload: 'Sergio' });
   };
   return (
     <header>
@@ -132,17 +132,17 @@ Uma boa prática é utilizar um action creator, que é uma função que retorna 
 ```js
 // /src/store/user.actions.js
 export function doSetUser(payload) {
-  return { type: "user/setUser", payload };
+  return { type: 'user/setUser', payload };
 }
 
 export function doDeleteUser() {
-  return { type: "user/deleteUser" };
+  return { type: 'user/deleteUser' };
 }
 
 // /src/pages/Home/index.js
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 
-import { doSetUser } from "../../store/user.actions.js";
+import { doSetUser } from '../../store/user.actions.js';
 
 const Home = () => {
   //repare que a chave usada em combineReducers é usada aqui
@@ -151,7 +151,7 @@ const Home = () => {
 
   const handleClick = () => {
     // código mais limpo
-    dispatch(doSetUser("Sergio"));
+    dispatch(doSetUser('Sergio'));
   };
   return (
     <header>
@@ -191,10 +191,10 @@ Analogamente, poderiamos ter o seguinte reducer:
 ```js
 const reducer = (state, action) => {
   switch (action.type) {
-    case "increment":
+    case 'increment':
       return state + 1;
 
-    case "decrement":
+    case 'decrement':
       return state - 1;
   }
 };
@@ -203,10 +203,10 @@ const reducer = (state, action) => {
 E durante o ciclo de vida da aplicação, um usuário clicar em botões que disparem a seguinte sequência de dispatchs:
 
 ```js
-dispatch({ type: "increment" });
-dispatch({ type: "decrement" });
-dispatch({ type: "increment" });
-dispatch({ type: "increment" });
+dispatch({ type: 'increment' });
+dispatch({ type: 'decrement' });
+dispatch({ type: 'increment' });
+dispatch({ type: 'increment' });
 ```
 
 E de novo chegaríamos a `store.getState() = 2`
