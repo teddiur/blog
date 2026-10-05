@@ -24,7 +24,8 @@ pnpm-debug.log*
 .idea/
 
 # graphify
-graphify-out/cache/
 INPUT_PATH/
 graphify-out/
+!graphify-out/graph.html
+!graphify-out/graph.json
 .claude/
