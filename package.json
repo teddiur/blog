@@ -9,8 +9,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "test:integration": "playwright test",
+    "test:integration:install": "playwright install chromium"
   },
   "dependencies": {
     "@astrojs/react": "^7.0.0",
@@ -23,6 +25,7 @@
     "tesseract.js": "^7.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.0",
     "prettier": "^3.9.9",
     "vitest": "^4.1.11"
   },

@@ -7,6 +7,7 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   test: {
+    include: ['test/unit/**/*.test.ts'],
     globals: true,
     environment: 'node',
     setupFiles: ['./vitest.setup.ts'],
