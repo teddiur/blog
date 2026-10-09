@@ -8,7 +8,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@astrojs/react": "^7.0.0",
@@ -21,7 +23,8 @@
     "tesseract.js": "^7.0.0"
   },
   "devDependencies": {
-    "prettier": "^3.9.9"
+    "prettier": "^3.9.9",
+    "vitest": "^4.1.11"
   },
   "allowScripts": {
     "tesseract.js@7.0.0": true,
